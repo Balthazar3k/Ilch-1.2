@@ -17,7 +17,7 @@ spl_autoload_register(function($className) {
     if(file_exists($filePath)) {
         require_once $filePath;
     } else {
-        throw new InvalidArgumentException('the file "'.$filePath.'" does not exist');
+        return false;
     }
 });
 
